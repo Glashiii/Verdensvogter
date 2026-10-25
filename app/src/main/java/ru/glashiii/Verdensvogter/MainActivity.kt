@@ -1,6 +1,7 @@
 package ru.glashiii.Verdensvogter
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,5 +21,21 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        binding.modeToggle.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                if (checkedId == binding.previewButton.id){
+                    binding.textNotEditable.text = binding.editText1.text.toString()
+                    binding.textNotEditable.visibility = View.VISIBLE
+                    binding.editText1.visibility = View.GONE
+                }
+                else {
+                    binding.textNotEditable.visibility = View.GONE
+                    binding.editText1.visibility = View.VISIBLE
+                }
+            }
+        }
     }
+
+
 }
