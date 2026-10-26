@@ -3,4 +3,9 @@
     <string name="edit_button">Редактирование</string>
     <string name="preview_button">Просмотр</string>
     <string name="header">Заголовок</string>
+    <string name="open_menu">Открыть меню</string>
+    <string name="item_knowledge">Знания</string>
+    <string name="item_map">Карта</string>
+    <string name="load_map_image">Загрузить изображение</string>
+    <string name="map_image_description">Изображение карты</string>
 </resources>
